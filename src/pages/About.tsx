@@ -24,7 +24,7 @@ const itemVariants = {
 const AboutMe: React.FC = () => {
   return (
     <motion.div
-      className="container mx-auto px-6 pt-22 font-inter"
+      className="container mx-auto px-6 pt-25 font-inter"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
