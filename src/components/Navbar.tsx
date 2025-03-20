@@ -2,15 +2,16 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { navLinks } from "../links";
 
-const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "About Me", path: "/about" },
-  { name: "Skills Set", path: "/skills" },
-  { name: "Contact", path: "/contact" },
-  { name: "Projects", path: "/projects" },
-  { name: "Blog", path: "/blog" },
-];
+// const navLinks = [
+//   { name: "Home", path: "/" },
+//   { name: "About Me", path: "/about" },
+//   { name: "Skills Set", path: "/skills" },
+//   { name: "Contact", path: "/contact" },
+//   { name: "Projects", path: "/projects" },
+//   { name: "Blog", path: "/blogs" },
+// ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -22,6 +23,35 @@ const ContactPage: React.FC = () => {
     alert("Form submitted! Check the console for details.");
   };
 
+  // Social media links
+  const socialMediaLinks = [
+    {
+      name: "GitHub",
+      icon: <FaGithub className="w-6 h-6" />,
+      link: "https://github.com/yourusername",
+    },
+    {
+      name: "LinkedIn",
+      icon: <FaLinkedin className="w-6 h-6" />,
+      link: "https://linkedin.com/in/yourusername",
+    },
+    {
+      name: "Twitter",
+      icon: <FaTwitter className="w-6 h-6" />,
+      link: "https://twitter.com/yourusername",
+    },
+    {
+      name: "Instagram",
+      icon: <FaInstagram className="w-6 h-6" />,
+      link: "https://instagram.com/yourusername",
+    },
+    {
+      name: "TikTok",
+      icon: <FaTiktok className="w-6 h-6" />,
+      link: "https://tiktok.com/@yourusername",
+    },
+  ];
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-purple-50 py-12 px-4">
       {/* Form Container (60% width) */}
@@ -34,12 +64,35 @@ const ContactPage: React.FC = () => {
         <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
           Contact Me
         </h1>
+
+        {/* Social Media Links */}
+        <motion.div
+          className="flex justify-center space-x-6 mb-8"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          {socialMediaLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-300"
+              aria-label={social.name}
+            >
+              {social.icon}
+            </a>
+          ))}
+        </motion.div>
+
+        {/* Contact Form */}
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Name Field */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             <label className="block text-sm font-medium text-gray-700">
               Name
@@ -58,7 +111,7 @@ const ContactPage: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
           >
             <label className="block text-sm font-medium text-gray-700">
               Email
@@ -77,7 +130,7 @@ const ContactPage: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
           >
             <label className="block text-sm font-medium text-gray-700">
               Contact (Optional)
@@ -95,7 +148,7 @@ const ContactPage: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 1 }}
           >
             <label className="block text-sm font-medium text-gray-700">
               Message
@@ -114,7 +167,7 @@ const ContactPage: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
             className="flex justify-center"
           >
             <button
