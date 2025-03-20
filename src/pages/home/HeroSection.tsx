@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 
 const HeroSection: React.FC = () => {
@@ -24,10 +25,10 @@ const HeroSection: React.FC = () => {
         />
       </div>
       <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-        <button className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition duration-300">
+        <Link to='/projects' className="cursor-pointer px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition duration-300">
           View My Work
-        </button>
-        <button className="px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg shadow-lg hover:bg-white hover:text-blue-600 transition duration-300">
+        </Link>
+        <button className="cursor-pointer px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg shadow-lg hover:bg-white hover:text-blue-600 transition duration-300">
           Download My CV
         </button>
       </div>
