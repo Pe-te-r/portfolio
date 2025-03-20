@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 // import Projects from "./pages/Projects";
 // import About from "./pages/About";
 // import Blog from "./pages/Blog";
@@ -10,10 +11,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        {/* <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/" element={<Home />} />
+
       </Routes>
     </>
   );
