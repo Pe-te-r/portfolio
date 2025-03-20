@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import SkillsSection from "./pages/home/SkillsSection";
 import About from "./pages/About";
 import ContactPage from "./pages/Contact";
-import ProjectsPage from "./pages/Projects";
+import ProjectsPage from "./pages/projects/Projects";
 
 
 function App() {
