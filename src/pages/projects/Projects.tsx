@@ -41,7 +41,7 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <motion.div
-      className="container mx-auto px-6 pt-25 font-inter"
+      className="container mx-auto px-6 mt-5 font-inter"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

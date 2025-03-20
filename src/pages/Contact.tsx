@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaTiktok } from "react-icons/fa";
+import { socialMediaLinks } from "../links";
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -22,36 +22,6 @@ const ContactPage: React.FC = () => {
     console.log("Form Data Submitted:", formData);
     alert("Form submitted! Check the console for details.");
   };
-
-  // Social media links
-  const socialMediaLinks = [
-    {
-      name: "GitHub",
-      icon: <FaGithub className="w-6 h-6" />,
-      link: "https://github.com/yourusername",
-    },
-    {
-      name: "LinkedIn",
-      icon: <FaLinkedin className="w-6 h-6" />,
-      link: "https://linkedin.com/in/yourusername",
-    },
-    {
-      name: "Twitter",
-      icon: <FaTwitter className="w-6 h-6" />,
-      link: "https://twitter.com/yourusername",
-    },
-    {
-      name: "Instagram",
-      icon: <FaInstagram className="w-6 h-6" />,
-      link: "https://instagram.com/yourusername",
-    },
-    {
-      name: "TikTok",
-      icon: <FaTiktok className="w-6 h-6" />,
-      link: "https://tiktok.com/@yourusername",
-    },
-  ];
-
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-purple-50 py-12 px-4">
       {/* Form Container (60% width) */}

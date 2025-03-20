@@ -5,14 +5,16 @@ import SkillsSection from "./pages/home/SkillsSection";
 import About from "./pages/About";
 import ContactPage from "./pages/Contact";
 import ProjectsPage from "./pages/projects/Projects";
-import BlogPage from "./pages/Blogs";
-import Footer from "./components/Footer";
+import BlogPage from "./pages/blogs/Blogs";
+import Layout from "./components/Layout";
 
 
 function App() {
   return (
     <>
       <Navbar />
+      <Layout>
+
       <Routes>
 
         <Route path="/" element={<Home />} />
@@ -22,7 +24,7 @@ function App() {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/blogs" element={<BlogPage />} />
       </Routes>
-      <Footer/>
+      </Layout>
     </>
   );
 }

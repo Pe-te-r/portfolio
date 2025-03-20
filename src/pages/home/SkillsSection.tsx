@@ -46,7 +46,7 @@ const SkillsSection: React.FC = () => {
   return (
     <motion.div
       id="skills"
-      className="py-20 px-4 bg-gray-50"
+      className="pt-7 px-4 bg-gray-50"
       initial="hidden"
       animate="visible"
       variants={containerVariants}

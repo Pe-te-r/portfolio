@@ -5,7 +5,7 @@ import { socialMediaLinks, navLinks } from "../links.tsx";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-800 text-white py-12">
+    <footer className="bg-gray-800 text-white py-12 mt-10">
       <div className="container mx-auto px-6">
         {/* Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
