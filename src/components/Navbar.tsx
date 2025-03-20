@@ -5,10 +5,11 @@ import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "Home", path: "/" },
-  { name: "Projects", path: "/projects" },
   { name: "About Me", path: "/about" },
-  { name: "Blog", path: "/blog" },
+  { name: "Skills Set", path: "/skills" },
   { name: "Contact", path: "/contact" },
+  { name: "Projects", path: "/projects" },
+  { name: "Blog", path: "/blog" },
 ];
 
 export default function Navbar() {
@@ -16,6 +17,7 @@ export default function Navbar() {
   const location = useLocation();
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // Update active index based on the current path
   useEffect(() => {
     const index = navLinks.findIndex((link) => link.path === location.pathname);
     setActiveIndex(index !== -1 ? index : 0);
@@ -29,7 +31,6 @@ export default function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        
         {/* Logo Animation */}
         <motion.div
           className="text-2xl font-extrabold text-white cursor-pointer tracking-wide"
@@ -47,12 +48,14 @@ export default function Navbar() {
             <motion.div
               key={index}
               className={`relative px-4 py-2 cursor-pointer text-lg transition-all duration-300 ${
-                activeIndex === index ? "text-yellow-300 font-bold" : "text-white/90 hover:text-yellow-300"
+                activeIndex === index
+                  ? "text-yellow-300 font-bold bg-blue-700 rounded-lg"
+                  : "text-white/90 hover:text-yellow-300"
               }`}
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.2 }}
             >
-              <Link to={link.path}>{link.name}</Link>
+              <Link to={link.path} className="py-4">{link.name}</Link>
             </motion.div>
           ))}
         </div>
@@ -80,7 +83,9 @@ export default function Navbar() {
             <motion.li
               key={index}
               className={`px-4 py-2 text-white/90 hover:text-yellow-300 cursor-pointer transition-all duration-300 ${
-                activeIndex === index ? "text-yellow-300 font-bold" : ""
+                activeIndex === index
+                  ? "text-yellow-300 font-bold bg-blue-700 rounded-lg"
+                  : ""
               }`}
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.2 }}

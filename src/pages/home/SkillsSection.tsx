@@ -4,8 +4,10 @@ import { skills, SkillsCategory } from './skills';
 const SkillCard: React.FC<SkillsCategory> = ({ category, items }) => {
   return (
     <div className="mb-12">
-      <h2 className="text-3xl font-bold mb-6 text-gray-800">{category}</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-gray-800 text-center sm:text-left">
+        {category}
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {items.map((item, index) => (
           <div
             key={index}
@@ -25,6 +27,9 @@ const SkillCard: React.FC<SkillsCategory> = ({ category, items }) => {
 const SkillsSection: React.FC = () => {
   return (
     <div id="skills" className="py-20 px-4 bg-gray-50">
+      <h3 className="text-center text-3xl sm:text-4xl font-bold mb-12 text-gray-800">
+        Skills Set
+      </h3>
       <div className="max-w-6xl mx-auto">
         {skills.map((skill, index) => (
           <SkillCard key={index} category={skill.category} items={skill.items} />
