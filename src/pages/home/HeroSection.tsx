@@ -27,9 +27,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ messages }) => {
         <Link to='/projects' className="cursor-pointer px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-gray-100 transition duration-300">
           View My Work
         </Link>
-        <button className="cursor-pointer px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg shadow-lg hover:bg-white hover:text-blue-600 transition duration-300">
+        <a
+          href="/resume.pdf" // Path to your resume file in the public folder
+          download="resume.pdf" // Optional: Specify the downloaded file's name
+          className="cursor-pointer px-6 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg shadow-lg hover:bg-white hover:text-blue-600 transition duration-300"
+        >
           Download My CV
-        </button>
+        </a>
       </div>
     </div>
   );
