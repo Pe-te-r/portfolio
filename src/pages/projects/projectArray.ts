@@ -26,7 +26,7 @@ export const projectsData = [
   {
     id: 4,
     title: "Social links profile",
-    description: "This project is a personalized social link-sharing profile that allows you to showcase and share all your social media links in one place. ",
+    description: "This project is a personalized social link-sharing profile that allows you to showcase and share all your social media links in one place.",
     category: "api",
     liveLink: "https://pe-te-r.github.io/social_links/",
     sourceCode: "https://github.com/Pe-te-r/social_links",
@@ -35,7 +35,7 @@ export const projectsData = [
     id: 5,
     title: "REST Countries API with color theme switcher",
     description: "This project is a JavaScript-based web application that fetches and displays data from the REST Countries API. The goal was to test and enhance my JavaScript skills by building a dynamic and interactive user interface that showcases country information such as name, population, region, capital, and more.",
-    category: "api",
+    category: "javascript",
     liveLink: "https://pe-te-r.github.io/REST-Countries-Api/",
     sourceCode: "https://github.com/Pe-te-r/REST-Countries-Api",
   },

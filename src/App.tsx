@@ -5,8 +5,9 @@ import SkillsSection from "./pages/home/SkillsSection";
 import About from "./pages/About";
 import ContactPage from "./pages/Contact";
 import ProjectsPage from "./pages/projects/Projects";
-import BlogPage from "./pages/blogs/Blogs";
+import BlogPage from "./pages/blogs/BlogsPage";
 import Layout from "./components/Layout";
+import BlogPost from "./pages/blogs/BlogPost";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/blogs" element={<BlogPage />} />
+        <Route path="/blogs/:id" element={<BlogPost />} />
       </Routes>
       </Layout>
     </>

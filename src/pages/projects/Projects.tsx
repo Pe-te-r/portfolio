@@ -4,7 +4,7 @@ import { projectsData } from "./projectArray";
 
 
 // Categories for filtering
-const categories = ["all", "api", "frontend", "css", "javascript"];
+const categories = ["all", "api", "frontend", "javascript", "css"];
 
 // Animation variants
 const containerVariants = {
@@ -41,7 +41,7 @@ const ProjectsPage: React.FC = () => {
 
   return (
     <motion.div
-      className="container mx-auto px-6 mt-5 font-inter"
+      className="container mx-auto px-6 mt-9 font-inter"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
@@ -59,7 +59,7 @@ const ProjectsPage: React.FC = () => {
               setSelectedCategory(category);
               setCurrentPage(1); // Reset to first page when category changes
             }}
-            className={`px-6 py-2 rounded-lg font-semibold transition-colors duration-300 ${
+            className={`px-6 py-2 rounded-lg cursor-pointer font-semibold transition-colors duration-300 ${
               selectedCategory === category
                 ? "bg-blue-600 text-white"
                 : "bg-gray-200 text-gray-700 hover:bg-gray-300"
