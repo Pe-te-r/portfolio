@@ -5,7 +5,7 @@ export const socialMediaLinks = [
     {
       name: "GitHub",
       icon: <FaGithub className="w-6 h-6" />,
-      link: "https://github.com/yourusername",
+      link: "https://github.com/Pe-te-r",
     },
     {
       name: "LinkedIn",

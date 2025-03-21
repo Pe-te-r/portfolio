@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { blogsData } from "./blogData";
+// import { blogsData } from "./blogData";
 
 // Animation variants
 const containerVariants = {
@@ -22,16 +22,30 @@ const BlogPage: React.FC = () => {
       animate="visible"
       variants={containerVariants}
     >
-      <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-gray-900">
+      {/* Under Construction Banner */}
+      <div className="bg-yellow-100 border-l-4 border-yellow-500 p-6 rounded-lg mb-8">
+        <h2 className="text-2xl font-semibold text-yellow-800 mb-4">
+          🚧 Under Construction 🚧
+        </h2>
+        <p className="text-yellow-700">
+          This blog is currently under construction. I'm working hard to bring
+          you amazing content. Please check back soon!
+        </p>
+        <p className="text-yellow-700 mt-4">
+          In the meantime, feel free to explore other pages.
+        </p>
+      </div>
+
+      {/* <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-gray-900">
         My Blog
-      </h1>
+      </h1> */}
 
       {/* Blog Posts Grid */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        variants={containerVariants}
+        variants={containerVariants} 
       >
-        {blogsData.map((blog) => (
+        {/* {blogsData.length>0 && blogsData.map((blog) => (
           <motion.div
             key={blog.id}
             className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
@@ -56,7 +70,7 @@ const BlogPage: React.FC = () => {
               </Link>
             </div>
           </motion.div>
-        ))}
+        ))} */}
       </motion.div>
     </motion.div>
   );
