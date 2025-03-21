@@ -1,5 +1,5 @@
 
-import { FaJs, FaPython, FaReact, FaNodeJs, FaGit, FaDocker, FaVuejs, FaVimeo } from 'react-icons/fa';
+import { FaJs, FaPython, FaReact, FaNodeJs, FaGit,  FaVuejs, } from 'react-icons/fa';
 import { SiTypescript, SiVscodium ,SiHtml5, SiCss3, SiHono, SiExpress, SiFlask, SiVim, SiAlchemy, SiDrizzle, SiPostgresql, SiLinux} from 'react-icons/si';
 
 type SkillItem = {

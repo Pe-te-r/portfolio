@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 // import { blogsData } from "./blogData";
 
 // Animation variants
@@ -9,10 +8,6 @@ const containerVariants = {
   visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
 };
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
 
 const BlogPage: React.FC = () => {
   return (
