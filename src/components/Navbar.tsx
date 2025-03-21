@@ -4,15 +4,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { navLinks } from "../links";
 
-// const navLinks = [
-//   { name: "Home", path: "/" },
-//   { name: "About Me", path: "/about" },
-//   { name: "Skills Set", path: "/skills" },
-//   { name: "Contact", path: "/contact" },
-//   { name: "Projects", path: "/projects" },
-//   { name: "Blog", path: "/blogs" },
-// ];
-
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -44,7 +35,7 @@ export default function Navbar() {
         </motion.div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-8">
           {navLinks.map((link, index) => (
             <motion.div
               key={index}
@@ -56,14 +47,16 @@ export default function Navbar() {
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.2 }}
             >
-              <Link to={link.path} className="py-4">{link.name}</Link>
+              <Link to={link.path} className="block py-1">
+                {link.name}
+              </Link>
             </motion.div>
           ))}
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="lg:hidden text-white cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -72,26 +65,30 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <motion.div
-        className={`md:hidden bg-blue-500/95 shadow-lg py-4 px-6 absolute top-full left-0 w-full ${
+        className={`lg:hidden bg-blue-500/95 shadow-lg py-4 px-6 absolute top-full left-0 w-full ${
           isOpen ? "block" : "hidden"
         }`}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: isOpen ? 1 : 0, y: isOpen ? 0 : -20 }}
         transition={{ duration: 0.5 }}
       >
-        <ul className="space-y-4">
+        <ul className="space-y-2">
           {navLinks.map((link, index) => (
             <motion.li
               key={index}
-              className={`px-4 py-2 text-white/90 hover:text-yellow-300 cursor-pointer transition-all duration-300 ${
+              className={`w-full ${
                 activeIndex === index
                   ? "text-yellow-300 font-bold bg-blue-700 rounded-lg"
-                  : ""
+                  : "text-white/90 hover:text-yellow-300"
               }`}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.2 }}
             >
-              <Link to={link.path} onClick={() => setIsOpen(false)}>
+              <Link
+                to={link.path}
+                onClick={() => setIsOpen(false)}
+                className="block w-full px-4 py-3 cursor-pointer"
+              >
                 {link.name}
               </Link>
             </motion.li>

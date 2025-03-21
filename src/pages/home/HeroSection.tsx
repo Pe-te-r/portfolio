@@ -2,21 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Typewriter from 'typewriter-effect';
 
-const HeroSection: React.FC = () => {
+interface HeroSectionProps {
+  messages: string[];
+}
+
+const HeroSection: React.FC<HeroSectionProps> = ({ messages }) => {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4">
+    <div className="flex flex-col pt-4 items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4">
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-center">
         Hey, I’m <span className="text-yellow-400">Phantom</span>
       </h1>
       <div className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8 text-center">
         <Typewriter
           options={{
-            strings: [
-              'A Full Stack Developer',
-              'Experienced in React & Node.js',
-              'Passionate about Building Scalable Apps',
-              'Let’s Create Something Amazing!',
-            ],
+            strings: messages,
             autoStart: true,
             loop: true,
             delay: 50,
