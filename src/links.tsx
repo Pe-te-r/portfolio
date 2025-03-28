@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 // social media links
 export const socialMediaLinks = [
@@ -15,18 +15,18 @@ export const socialMediaLinks = [
     {
       name: "Twitter",
       icon: <FaTwitter className="w-6 h-6" />,
-      link: "https://twitter.com/pe_te_r",
+      link: "https://x.com/Pe_te_r_",
     },
     {
       name: "Instagram",
       icon: <FaInstagram className="w-6 h-6" />,
       link: "https://www.instagram.com/openaura_/",
     },
-    {
-      name: "TikTok",
-      icon: <FaTiktok className="w-6 h-6" />,
-      link: "https://tiktok.com/@yourusername",
-    },
+    // {
+    //   name: "TikTok",
+    //   icon: <FaTiktok className="w-6 h-6" />,
+    //   link: "https://tiktok.com/@yourusername",
+    // },
   ];
 
 

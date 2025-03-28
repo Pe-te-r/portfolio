@@ -1,6 +1,6 @@
 
-import { FaJs, FaPython, FaReact, FaNodeJs, FaGit,  FaVuejs, } from 'react-icons/fa';
-import { SiTypescript, SiVscodium ,SiHtml5, SiCss3, SiHono, SiExpress, SiFlask, SiVim, SiAlchemy, SiDrizzle, SiPostgresql, SiLinux} from 'react-icons/si';
+import { FaJs, FaPython, FaReact, FaNodeJs, FaGit,   } from 'react-icons/fa';
+import { SiTypescript, SiVscodium ,SiHtml5, SiCss3, SiHono, SiExpress, SiFlask, SiVim, SiAlchemy, SiDrizzle, SiPostgresql, SiLinux, SiSvelte} from 'react-icons/si';
 
 type SkillItem = {
   name: string;
@@ -27,7 +27,7 @@ export const skills: SkillsCategory[] = [
     category: 'Frameworks',
     items: [
       { name: 'React', icon: <FaReact className="w-16 h-16" /> },
-      {name:'Vue',icon:<FaVuejs className='w-16 h-16'/>},
+      {name:'Svelte',icon:<SiSvelte className='w-16 h-16'/>},
       {name:'Hono',icon:<SiHono className='w-16 h-16'/>},
       { name: 'Express', icon: <SiExpress className="w-16 h-16" /> },
       { name: 'Flask', icon: <SiFlask className="w-16 h-16" /> },

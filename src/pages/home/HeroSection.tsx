@@ -10,7 +10,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ messages }) => {
   return (
     <div className="flex flex-col pt-4 items-center justify-center h-screen bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4">
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-center">
-        Hey, I’m <span className="text-yellow-400">Phantom</span>
+        Hey, I’m <span className="text-yellow-400">Peter</span>
       </h1>
       <div className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8 text-center">
         <Typewriter

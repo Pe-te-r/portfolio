@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 // Categorized skills
 const skills = {
     languages: ["Html","Css","Scss","JavaScript", "TypeScript", "Python"],
-    frameworks: ["React", "Vue",  "Express", "Hono", "Drizzle", "Flask","FastApi","Node.js",],
+    frameworks: ["React", "Svelte",  "Express", "Hono", "Drizzle", "Flask","FastApi","Node.js",],
     tools: ["Git", "Linux", "OBS Studio", "Audacity", "Shotcut"],
-    additional: ["Pygame (Game Development)", "Android Development (Learning)","Machine Learning (Learning)"],
+    additional: ["Pygame (Game Development)","Machine Learning (Learning)"],
   };
 
 // Animation variants

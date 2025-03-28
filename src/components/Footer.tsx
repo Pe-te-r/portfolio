@@ -1,5 +1,6 @@
 import React from "react";
 import { socialMediaLinks, navLinks } from "../links.tsx";
+import { Link } from "react-router-dom";
 
 
 
@@ -34,12 +35,12 @@ const Footer: React.FC = () => {
             <ul className="space-x-2 flex justify-center items-center">
               {navLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.path}
+                  <Link
+                    to={link.path}
                     className="text-gray-300 hover:text-blue-500 transition-colors duration-300"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
