@@ -10,17 +10,17 @@ export const socialMediaLinks = [
     {
       name: "LinkedIn",
       icon: <FaLinkedin className="w-6 h-6" />,
-      link: "https://linkedin.com/in/yourusername",
+      link: "https://www.linkedin.com/in/peter-wahu-519347213/",
     },
     {
       name: "Twitter",
       icon: <FaTwitter className="w-6 h-6" />,
-      link: "https://twitter.com/yourusername",
+      link: "https://twitter.com/pe_te_r",
     },
     {
       name: "Instagram",
       icon: <FaInstagram className="w-6 h-6" />,
-      link: "https://instagram.com/yourusername",
+      link: "https://www.instagram.com/openaura_/",
     },
     {
       name: "TikTok",

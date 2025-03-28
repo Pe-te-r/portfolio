@@ -40,7 +40,7 @@ const AboutMe: React.FC = () => {
       {/* Introduction */}
       <motion.section className="mb-8" variants={itemVariants}>
         <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-800">
-          Hi, I'm Phantom
+          Hi, I'm Peter
         </h2>
         <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
           I'm a passionate Full Stack Developer with a strong focus on building
@@ -262,7 +262,7 @@ const AboutMe: React.FC = () => {
               Projects
             </Link>{" "}
             and{" "}
-            <Link to="/blog" className="text-blue-600 hover:underline">
+            <Link to="/blogs" className="text-blue-600 hover:underline">
               Blog
             </Link>{" "}
             for more insights into my work.
