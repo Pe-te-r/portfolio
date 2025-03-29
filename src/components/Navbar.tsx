@@ -53,6 +53,7 @@ export default function Navbar() {
                 {link.name}
               </Link>
             </motion.div>
+            
           ))}
         </div>
 
