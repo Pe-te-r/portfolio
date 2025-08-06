@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Categorized skills
 const skills = {
     languages: ["Html","Css","Scss","JavaScript", "TypeScript", "Python"],
-    frameworks: ["React", "Svelte",  "Express", "Hono", "Drizzle", "Flask","FastApi","Node.js",],
+    frameworks: ["React", "Svelte",  "Express", "Hono", "Drizzle", "Flask","FastApi","Nestjs","Node.js"],
     tools: ["Git", "Linux", "OBS Studio", "Audacity", "Shotcut"],
     additional: ["Pygame (Game Development)","Machine Learning (Learning)"],
   };
@@ -51,7 +51,7 @@ const AboutMe: React.FC = () => {
         </p>
       </motion.section>
 
-      {/* My Journey */}
+      {/* My Journey
       <motion.section className="mb-8" variants={itemVariants}>
         <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-800">
           My Journey
@@ -70,7 +70,48 @@ const AboutMe: React.FC = () => {
           self-study certifications in <strong>Linux+</strong> and <strong>CCNA</strong>, which have equipped me
           with valuable skills in system administration and networking.
         </p>
-      </motion.section>
+      </motion.section> */}
+
+      <motion.section className="mb-8" variants={itemVariants}>
+  <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-800">
+    My Journey
+  </h2>
+  <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+    I discovered my love for coding during my second year of university.
+    What started as a curiosity quickly turned into a passion as I began
+    solving real-world problems through programming. Since then, I've been
+    on an exciting journey of self-study and hands-on projects, constantly
+    pushing myself to learn and grow.
+  </p>
+
+  <div className="mt-6 space-y-6">
+    {/* 2025 Training */}
+    <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-purple-500">
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">2025 Advanced Training Cohort (May–July)</h3>
+      <p className="text-gray-700">
+        Expanded my backend expertise with <strong>Nest.js</strong> and <strong>PostgreSQL</strong>, while mastering 
+        infrastructure tools like <strong>Docker</strong> and <strong>Redis</strong>. Applied these skills to build 
+        a scalable <strong>grocery store application</strong>, focusing on microservices and performance optimization.
+      </p>
+    </div>
+
+    {/* 2024 Certification */}
+    <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-blue-500">
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">2024 Teach2Give Certification (April–July)</h3>
+      <p className="text-gray-700">
+        Studied modern full-stack development with <strong>Hono</strong>, <strong>React</strong>, and <strong>Drizzle ORM</strong>, 
+        building a <strong>car rental platform</strong>. This program solidified my API design skills 
+        and TypeScript proficiency.
+      </p>
+    </div>
+  </div>
+
+  <p className="text-lg md:text-xl text-gray-700 leading-relaxed mt-6">
+    Beyond web development, I've completed self-study certifications in 
+    <strong> Linux+</strong> and <strong>CCNA</strong>, equipping me with system administration 
+    and networking knowledge to build robust, end-to-end solutions.
+  </p>
+</motion.section>
 
       {/* Skills */}
       <motion.section className="mb-8" variants={itemVariants}>
@@ -100,7 +141,7 @@ const AboutMe: React.FC = () => {
             <ul className="space-y-2">
               {skills.frameworks.map((skill, index) => (
                 <li key={index} className="text-gray-700">{skill}</li>
-              ))}
+              ))} 
             </ul>
           </motion.div>
 
@@ -133,14 +174,14 @@ const AboutMe: React.FC = () => {
       </motion.section>
 
       {/* Experience */}
-      <motion.section className="mb-8" variants={itemVariants}>
+      {/* <motion.section className="mb-8" variants={itemVariants}>
         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-800">
           Experience
         </h2>
-        <div className="space-y-4">
+         <div className="space-y-4">
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <h3 className="text-xl font-semibold">Full Stack Developer</h3>
-            <p className="text-gray-700">Jitu (2021–Present)</p>
+            <p className="text-gray-700">Jitu (April 2024–31st July 2024)</p>
             <p className="text-gray-700">
               At Jitu, I worked on a <strong>car rental website</strong> as part of a team, using
               modern technologies like <strong>Hono</strong>, <strong>React</strong>, and <strong>Drizzle</strong>. This project
@@ -151,7 +192,62 @@ const AboutMe: React.FC = () => {
             </p>
           </div>
         </div>
-      </motion.section>
+        <div className="space-y-4">
+          <div className="bg-white p-6 rounded-lg shadow-sm">
+            <h3 className="text-xl font-semibold">Full Stack Developer</h3>
+            <p className="text-gray-700">Jitu (April 2024–31st July 2024)</p>
+            <p className="text-gray-700">
+              At Jitu, I worked on a <strong>car rental website</strong> as part of a team, using
+              modern technologies like <strong>Hono</strong>, <strong>React</strong>, and <strong>Drizzle</strong>. This project
+              involved building a full-stack application with a focus on
+              scalability, performance, and user experience. My role included
+              developing APIs, integrating front-end components, and ensuring
+              seamless communication between the client and server.
+            </p>
+          </div>
+        </div>
+      </motion.section> */}
+      <motion.section className="mb-8" variants={itemVariants}>
+  <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-800">
+    Experience
+  </h2>
+  <div className="space-y-4">
+    {/* 2025 - Solo Grocery Store Project */}
+    <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-green-500">
+      <h3 className="text-xl font-semibold">Full Stack Developer (Solo Project)</h3>
+      <p className="text-gray-600 mb-2">Jitu | May 2025 – July 2025</p>
+      <p className="text-gray-700">
+        Designed and deployed a full-stack <strong>grocery store application</strong> using <strong>Nest.js</strong>, <strong>React</strong>, and <strong>PostgreSQL</strong>. 
+        Implemented real-time inventory updates with <strong>Redis</strong>, containerized services via <strong>Docker</strong>, 
+        and optimized queries for high-traffic scenarios.
+      </p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Nest.js</span>
+        <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">React</span>
+        <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">PostgreSQL</span>
+        <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Docker</span>
+        <span className="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Redis</span>
+      </div>
+    </div>
+
+    {/* 2024 - Solo Car Rental Project */}
+    <div className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
+      <h3 className="text-xl font-semibold">Full Stack Developer (Solo Project)</h3>
+      <p className="text-gray-600 mb-2">Jitu | April 2024 – July 2024</p>
+      <p className="text-gray-700">
+        Built a <strong>car rental platform</strong> from scratch with <strong>Hono</strong>, <strong>React</strong>, and <strong>Drizzle ORM</strong>. 
+        Developed RESTful APIs for booking management, integrated payment gateways, 
+        and engineered a responsive UI with dynamic search filters.
+      </p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">Hono</span>
+        <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">React</span>
+        <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">Drizzle</span>
+        <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">TypeScript</span>
+      </div>
+    </div>
+  </div>
+</motion.section>
 
       {/* Education */}
       <motion.section className="mb-8" variants={itemVariants}>
@@ -219,8 +315,7 @@ const AboutMe: React.FC = () => {
             When I'm not coding, I enjoy playing chess, which helps me sharpen my
             strategic thinking, and going on bicycle rides to clear my mind and stay
             active. I'm also passionate about <strong>game development</strong> and love creating games
-            using <strong>Pygame</strong>. Beyond web development, I'm exploring other technologies like
-            <strong>Android development</strong> to expand my skill set. Additionally, I have experience
+            using <strong>Pygame</strong>. Beyond web development, I'm exploring other technologies like <strong>Android development</strong> to expand my skill set. Additionally, I have experience
             with tools like <strong>OBS Studio</strong>, <strong>Audacity</strong>, and <strong>Shotcut</strong> for video and audio editing.
           </p>
         </div>
