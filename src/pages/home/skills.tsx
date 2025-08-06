@@ -1,6 +1,6 @@
 
-import { FaJs, FaPython, FaReact, FaNodeJs, FaGit,   } from 'react-icons/fa';
-import { SiTypescript, SiVscodium ,SiHtml5, SiCss3, SiHono, SiExpress, SiFlask, SiVim, SiAlchemy, SiDrizzle, SiPostgresql, SiLinux, SiSvelte} from 'react-icons/si';
+import { FaJs, FaPython, FaReact, FaNodeJs, FaGit, FaDocker,   } from 'react-icons/fa';
+import { SiTypescript, SiVscodium ,SiHtml5, SiCss3, SiHono, SiExpress, SiFlask, SiVim, SiAlchemy, SiDrizzle, SiPostgresql, SiLinux, SiSvelte, SiNestjs, SiFastapi, SiTypeorm} from 'react-icons/si';
 
 type SkillItem = {
   name: string;
@@ -31,6 +31,9 @@ export const skills: SkillsCategory[] = [
       {name:'Hono',icon:<SiHono className='w-16 h-16'/>},
       { name: 'Express', icon: <SiExpress className="w-16 h-16" /> },
       { name: 'Flask', icon: <SiFlask className="w-16 h-16" /> },
+      { name: 'NestJS', icon: <SiNestjs className="w-16 h-16" /> },
+      { name: 'FastAPI', icon: <SiFastapi className="w-16 h-16" /> },
+      { name: 'Fastify', icon: <SiHono className="w-16 h-16" /> },
       { name: 'Node.js', icon: <FaNodeJs className="w-16 h-16" /> },
     ],
   },
@@ -38,9 +41,11 @@ export const skills: SkillsCategory[] = [
     category: 'Tools',
     items: [
       { name: 'SQLAlchemy', icon: <SiAlchemy className="w-16 h-16" /> },
+      {name:'TypeOrm',icon:<SiTypeorm className='w-16 h-16'/>},
       { name: 'Drizzle', icon: <SiDrizzle className="w-16 h-16" /> },
       { name: 'Postgres', icon: <SiPostgresql className="w-16 h-16" /> },
       { name: 'Git', icon: <FaGit className="w-16 h-16" /> },
+      { name: 'Docker', icon: <FaDocker className="w-16 h-16" /> },
       { name: 'vim', icon: <SiVim className="w-16 h-16" /> },
       { name: 'VS Code', icon: <SiVscodium className="w-16 h-16" /> },
       { name: 'Linux', icon: <SiLinux className="w-16 h-16" /> },
