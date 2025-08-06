@@ -4,7 +4,7 @@ import { projectsData } from "./projectArray";
 
 
 // Categories for filtering
-const categories = ["all", "api", "frontend", "javascript", "css"];
+const categories = ["all", "api", "frontend", "javascript", "css", "fullstack"];
 
 // Animation variants
 const containerVariants = {

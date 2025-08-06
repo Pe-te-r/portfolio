@@ -30,4 +30,13 @@ export const projectsData = [
     category: "css",
     liveLink: "https://pe-te-r.github.io/time-tracker-dashboard/",
     sourceCode: "https://github.com/Pe-te-r/time-tracker-dashboard",
-  },];
+  },
+  {
+    id:5,
+    title: "Grocery Store",
+    description: "This project is a grocery store website that allows users to browse and purchase products online. It features a user-friendly interface, product listings, and a shopping cart functionality.",
+    category: "fullstack",
+    liveLink:"https://grocery-front-end-git-main-peters-projects-79634003.vercel.app/",
+    sourceCode: "https://github.com/Pe-te-r/grocery-front-end/",
+  }
+];
