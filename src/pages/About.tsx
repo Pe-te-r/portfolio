@@ -10,6 +10,7 @@ const skills = {
     additional: ["Pygame (Game Development)","Machine Learning (Learning)"],
   };
 
+  
 // Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
