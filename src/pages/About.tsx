@@ -50,28 +50,7 @@ const AboutMe: React.FC = () => {
           with a particular passion for creating <strong>APIs</strong> and <strong>full-stack applications</strong>.
         </p>
       </motion.section>
-
-      {/* My Journey
-      <motion.section className="mb-8" variants={itemVariants}>
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-800">
-          My Journey
-        </h2>
-        <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-          I discovered my love for coding during my second year of university.
-          What started as a curiosity quickly turned into a passion as I began
-          solving real-world problems through programming. Since then, I've been
-          on an exciting journey of self-study and hands-on projects, constantly
-          pushing myself to learn and grow.
-        </p>
-        <p className="text-lg md:text-xl text-gray-700 leading-relaxed mt-4">
-          In 2024, I earned a certification from <strong>Teach2Give</strong> (April–July), where I
-          studied <strong>Drizzle</strong>, <strong>React</strong>, and <strong>Hono</strong>. This experience deepened my understanding
-          of modern web development and API design. Additionally, I've completed
-          self-study certifications in <strong>Linux+</strong> and <strong>CCNA</strong>, which have equipped me
-          with valuable skills in system administration and networking.
-        </p>
-      </motion.section> */}
-
+      
       <motion.section className="mb-8" variants={itemVariants}>
   <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-800">
     My Journey
