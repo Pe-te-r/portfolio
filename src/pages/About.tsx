@@ -50,7 +50,7 @@ const AboutMe: React.FC = () => {
           with a particular passion for creating <strong>APIs</strong> and <strong>full-stack applications</strong>.
         </p>
       </motion.section>
-      
+
       <motion.section className="mb-8" variants={itemVariants}>
   <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-800">
     My Journey
@@ -66,7 +66,7 @@ const AboutMe: React.FC = () => {
   <div className="mt-6 space-y-6">
     {/* 2025 Training */}
     <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-purple-500">
-      <h3 className="text-lg font-semibold text-gray-800 mb-2">2025 Advanced Training Cohort (May–July)</h3>
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">2025 Teach2Give Certification (May–July)</h3>
       <p className="text-gray-700">
         Expanded my backend expertise with <strong>Nest.js</strong> and <strong>PostgreSQL</strong>, while mastering 
         infrastructure tools like <strong>Docker</strong> and <strong>Redis</strong>. Applied these skills to build 
@@ -76,7 +76,7 @@ const AboutMe: React.FC = () => {
 
     {/* 2024 Certification */}
     <div className="bg-gray-50 p-5 rounded-lg border-l-4 border-blue-500">
-      <h3 className="text-lg font-semibold text-gray-800 mb-2">2024 Teach2Give Certification (April–July)</h3>
+      <h3 className="text-lg font-semibold text-gray-800 mb-2">2024 Teach2Give Certification (May–July)</h3>
       <p className="text-gray-700">
         Studied modern full-stack development with <strong>Hono</strong>, <strong>React</strong>, and <strong>Drizzle ORM</strong>, 
         building a <strong>car rental platform</strong>. This program solidified my API design skills 
