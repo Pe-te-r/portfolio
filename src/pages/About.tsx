@@ -318,6 +318,7 @@ const AboutMe: React.FC = () => {
           </p>
         </div>
       </motion.section>
+      
 
       {/* Call to Action */}
       <motion.section className="text-center" variants={itemVariants}>
