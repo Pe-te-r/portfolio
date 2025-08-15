@@ -313,7 +313,8 @@ const AboutMe: React.FC = () => {
             experience. Check out my{" "}
             <Link to="/projects" className="text-blue-600 hover:underline">
               Projects
-            </Link>{" "}
+            </Link>{" "} 
+            
             page to see more!
           </p>
         </div>
