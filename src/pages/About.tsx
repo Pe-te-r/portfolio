@@ -314,7 +314,6 @@ const AboutMe: React.FC = () => {
             <Link to="/projects" className="text-blue-600 hover:underline">
               Projects
             </Link>{" "} 
-            
             page to see more!
           </p>
         </div>
