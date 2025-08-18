@@ -23,6 +23,7 @@ export const skills: SkillsCategory[] = [
       { name: 'Python', icon: <FaPython className="w-16 h-16" /> },
     ],
   },
+  
   {
     category: 'Frameworks',
     items: [
