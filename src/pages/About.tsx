@@ -1,16 +1,24 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import image from '../assets/WhatsApp Image 2025-08-17 at 15.55.17.jpeg'
 
-// Categorized skills
-const skills = {
-    languages: ["Html","Css","Scss","JavaScript", "TypeScript", "Python"],
-    frameworks: ["React", "Svelte",  "Express", "Hono", "Drizzle", "Flask","FastApi","Nestjs","Node.js"],
-    tools: ["Git", "Linux", "OBS Studio", "Audacity", "Shotcut"],
-    additional: ["Pygame (Game Development)","Machine Learning (Learning)"],
-  };
 
 // Animation variants
+
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  hover: { scale: 1.02, boxShadow: "0px 5px 15px rgba(0, 0, 0, 0.1)" },
+};
+
+const modalVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+  exit: { opacity: 0, scale: 0.8, transition: { duration: 0.2 } },
+};
+
+
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
@@ -22,6 +30,72 @@ const itemVariants = {
 };
 
 const AboutMe: React.FC = () => {
+
+  // Categorized skills
+const skills = {
+    languages: ["Html","Css","Scss","JavaScript", "TypeScript", "Python"],
+    frameworks: ["React", "Svelte",  "Express", "Hono", "Drizzle", "Flask","FastApi","Nestjs","Node.js"],
+    tools: ["Git", "Linux", "OBS Studio", "Audacity", "Shotcut"],
+    additional: ["Pygame (Game Development)","Machine Learning (Learning)"],
+  };
+
+  const certifications = [
+
+  {
+    id: 1,
+    title: "Teach2Give Advanced Certification",
+    period: "April–July 2025",
+    description: "Studied advanced concepts in full-stack development.",
+    bgColor: "bg-orange-50",
+    borderColor: "border-orange-200",
+    textColor: "text-orange-800",
+    hasImage: true,
+    image:image,
+    isExpected: true,
+  },
+    {
+    id: 2,
+    title: "Teach2Give Certification",
+    period: "April–July 2024",
+    description: "Studied Drizzle, React, and Hono to deepen my knowledge of modern web development and API design.",
+    bgColor: "bg-blue-50",
+    borderColor: "border-blue-200",
+    textColor: "text-blue-800",
+    hasImage: false,
+  },
+  {
+    id: 3,
+    title: "Linux+ Certification",
+    period: "Self-Study",
+    description: "Acquired advanced skills in Linux system administration through self-study.",
+    bgColor: "bg-green-50",
+    borderColor: "border-green-200",
+    textColor: "text-green-800",
+    hasImage: false,
+  },
+  {
+    id: 4,
+    title: "CCNA Certification",
+    period: "Self-Study",
+    description: "Gained expertise in networking and Cisco technologies through self-study.",
+    bgColor: "bg-purple-50",
+    borderColor: "border-purple-200",
+    textColor: "text-purple-800",
+    hasImage: false,
+  },
+];
+
+
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const openModal = (image: string) => {
+    setSelectedImage(image);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
   return (
     <motion.div
       className="container mx-auto px-6 mt-5 font-inter"
@@ -252,7 +326,68 @@ const AboutMe: React.FC = () => {
       </motion.section>
 
       {/* Certifications */}
+            {/* Certifications Section */}
       <motion.section className="mb-8" variants={itemVariants}>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-800">
+          Certifications
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {certifications.map((cert: any) => (
+            <motion.div
+              key={cert.id}
+              className={`p-6 rounded-lg shadow-sm border ${cert.bgColor} ${cert.borderColor} ${cert.isExpected ? "border-dashed" : ""}`}
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
+              whileHover="hover"
+            >
+              <h3 className={`text-xl font-semibold ${cert.textColor}`}>{cert.title}</h3>
+              <p className="text-gray-700 mb-3">{cert.period}</p>
+              
+              {cert.hasImage ? (
+                <motion.div 
+                  className="mb-3 cursor-pointer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => openModal(cert.image)}
+                >
+                  <img 
+                    src={cert.image} 
+                    alt={`${cert.title} certificate`} 
+                    className="rounded border max-w-full h-40 object-contain mx-auto shadow-md"
+                  />
+                  <p className="text-sm text-center text-gray-500 mt-1">Click to view full size</p>
+                </motion.div>
+              ) : cert.isExpected ? (
+                <motion.div 
+                  className="flex flex-col items-center justify-center h-40 my-3 rounded bg-gray-100 text-gray-500"
+                  initial={{ opacity: 0.7 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ repeat: Infinity, repeatType: "reverse", duration: 1.5 }}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="italic">Certificate In Progress</span>
+                </motion.div>
+              ) : (
+                <motion.div 
+                  className="flex items-center justify-center h-40 my-3 rounded bg-gray-100 text-gray-500"
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </motion.div>
+              )}
+              
+              <p className="text-gray-700">{cert.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* <motion.section className="mb-8" variants={itemVariants}>
         <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-800">
           Certifications
         </h2>
@@ -260,6 +395,7 @@ const AboutMe: React.FC = () => {
           <div className="bg-blue-50 p-6 rounded-lg shadow-sm">
             <h3 className="text-xl font-semibold">Teach2Give Certification</h3>
             <p className="text-gray-700">April–July 2024</p>
+            <img src={image} alt="Teach2Give 2025 Certificate" className="mt-2 rounded border max-w-xs" />
             <p className="text-gray-700">
               Studied <strong>Drizzle</strong>, <strong>React</strong>, and <strong>Hono</strong> to deepen my knowledge of modern
               web development and API design.
@@ -282,7 +418,7 @@ const AboutMe: React.FC = () => {
             </p>
           </div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* Interests */}
       <motion.section className="mb-8" variants={itemVariants}>
@@ -344,6 +480,35 @@ const AboutMe: React.FC = () => {
           </p>
         </div>
       </motion.section>
+         <AnimatePresence>
+        {selectedImage && (
+          <motion.div
+            className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4"
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={modalVariants}
+            onClick={closeModal}
+          >
+            <motion.div 
+              className="bg-white p-2 rounded-lg max-w-4xl max-h-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button 
+                className="absolute top-4 right-4 text-white text-3xl z-10"
+                onClick={closeModal}
+              >
+                &times;
+              </button>
+              <img 
+                src={selectedImage} 
+                alt="Certificate" 
+                className="max-w-full max-h-screen rounded"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 };
